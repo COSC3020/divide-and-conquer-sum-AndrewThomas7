@@ -1,5 +1,10 @@
-function ArrSum(arr){
+function arrSum(arr){
     sum=0;
+
+    if(arr.length<1){
+        return 0;
+    }
+    
     for(i=0;i<arr.length;i++){
         sum+=arr[i];
     }
