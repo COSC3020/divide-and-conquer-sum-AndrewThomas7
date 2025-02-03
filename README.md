@@ -20,8 +20,7 @@ that does the actual recursion.
 “I certify that I have listed all sources used to complete this exercise, including the use
 of any Large Language Models. All of the work is my own, except where stated
 otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is
-suspected, charges may be filed against me without prior notice.”
-15
+suspected, charges may be filed against me without prior notice.”-Andrew Thomas
 
 
 ## Runtime Analysis
@@ -31,4 +30,11 @@ relation for $T(n)$ as we did for merge sort (you can ignore constant factors)
 and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
-most important part. Add your answer to this markdown file.
+most important part. Add your answer to this markdown file. 
+$T(1)=1$, $T(n)=3T($\frac{a}{b}$)
+
+## Sources
+
+no.1-https://www.youtube.com/watch?v=4VqmGXwpLqc- This is a youtube video on how merge sort worked and it showed some code for an outline on how you might implement a divide and merge structure, I took inspiration for building my divide code based off this
+
+no.2- Worked with Ivan Martian on some psudo code for the base case
