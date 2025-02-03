@@ -1,4 +1,4 @@
-function arrSum(arr){
+function ArrSum(arr){
     sum=0;
 
     if(arr.length<1){
