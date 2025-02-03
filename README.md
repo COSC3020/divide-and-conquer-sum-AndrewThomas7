@@ -31,7 +31,31 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file. 
-$T(1)=1$, $T(n)=3T(\frac{a}{b}$)
+$T(1)=1$, $T(n)=3T(\frac{n}{3})$
+
+$= 3.(3T(\frac{n}{3^2}))$
+
+$=3^2.T(\frac{n}{3^2})$
+
+$=3^2(3.T(\frac{n}{3^3}))$
+
+$=3^iT(\frac{n}{3^i})$
+
+Now we need to find when the recurance relation is equal to the base case, in this insatnce it's T(1)=1.
+
+$\frac{i}{3}=1 \implies i=log_3(n)$
+
+Plugging this back in we have:
+
+$=3^{log_3(n)}T(\frac{n}{3^{(log_3(n))}})$
+
+Then because $T(\frac{n}{3^{(log_3(n))}})$ matches our base case it equals , thus we now have:
+
+$=3^{log_3(n)}$
+
+$=n \implies n \in \theta(n)$
+
+
 
 ## Sources
 
