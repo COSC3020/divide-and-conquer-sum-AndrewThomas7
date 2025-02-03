@@ -1,10 +1,11 @@
+
 function ArrSum(arr){
     sum=0;
 
     if(arr.length<1){
         return 0;
     }
-    
+
     for(i=0;i<arr.length;i++){
         sum+=arr[i];
     }
@@ -19,7 +20,7 @@ function divideAndConquerSum(a) {
 
 
     if(First_Arr.length < 3 & Second_Third.length <3 & Last_Third.length <3){
-        return ArrSumrrSum(First_Arr)+ ArrSumrrSum(Second_Third)+ ArrSumrrSum(Last_Third)
+        return ArrSum(First_Arr)+ ArrSum(Second_Third)+ ArrSum(Last_Third)
     }
 
 
