@@ -50,6 +50,8 @@ $=3^2.T(\frac{n}{3^2})$
 
 $T(\frac{n}{3^2})=3T(\frac{n}{\frac{3^2}{3}})=3T(\frac{n}{3^3})$
 
+Plugging in $T(\frac{n}{3^2})$ we have:
+
 $=3^2.(3.T(\frac{n}{3^3}))$
 
 $=3^3.T(\frac{n}{3^3})$
