@@ -33,7 +33,7 @@ $T(1)=1$, $T(n)=3T(\frac{n}{3})$
 
 $T(\frac{n}{3})=3T(\frac{n}{\frac{3}{3}})=3T(\frac{n}{3^2})$
 
-Plugging in $ T(\frac{n}{3})$ we then have:
+Plugging in $T(\frac{n}{3})$ we then have:
 
 $= 3.(3T(\frac{n}{3^2}))$
 
