@@ -29,6 +29,9 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file. 
+
+Solution:
+
 $T(1)=1$, $T(n)=3T(\frac{n}{3})$
 
 $T(\frac{n}{3})=3T(\frac{n}{\frac{3}{3}})=3T(\frac{n}{3^2})$
