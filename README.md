@@ -2,7 +2,9 @@
 In the lectures, we've covered merge sort, which uses a divide-and-conquer
 approach to sort an array of values. There are many more algorithms that take
 such an approach. Implement a function that computes the sum of an array of
-integers using divide and conquer, using the template in `code.js`. Test your
+integers using divide and conquer, using the template in `code.js`.
+
+Test your
 new function; I've provided some basic testing code that uses
 [jsverify](https://jsverify.github.io/) in `code.test.js`.
 The recursive calls sum up the numbers in the base case, and "merges" the sums
