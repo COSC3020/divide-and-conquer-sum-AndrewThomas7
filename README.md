@@ -29,14 +29,11 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file. 
-
-Solution:
-
 $T(1)=1$, $T(n)=3T(\frac{n}{3})$
 
 $T(\frac{n}{3})=3T(\frac{n}{\frac{3}{3}})=3T(\frac{n}{3^2})$
 
-Plugging in $T(\frac{n}{3})$ we then have:
+Plugging in $ T(\frac{n}{3})$ we then have:
 
 $= 3.(3T(\frac{n}{3^2}))$
 
@@ -66,10 +63,3 @@ Then because $T(\frac{n}{3^{(log_3(n))}})$ matches our base case it equals , thu
 $=3^{log_3(n)}$
 
 $=n \implies n \in \theta(n)$
-
-
-## Sources
-
-no.1-https://www.youtube.com/watch?v=4VqmGXwpLqc- This is a youtube video on how merge sort worked and it showed some code for an outline on how you might implement a divide and merge structure, I took inspiration for building my divide code based off this
-
-no.2- Worked with Ivan Martian on some psudo code for the base case
