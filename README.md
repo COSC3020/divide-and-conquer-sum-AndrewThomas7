@@ -2,16 +2,20 @@
 In the lectures, we've covered merge sort, which uses a divide-and-conquer
 approach to sort an array of values. There are many more algorithms that take
 such an approach. Implement a function that computes the sum of an array of
-integers using divide and conquer, using the template in `code.js`.
-
-Test your
+integers using divide and conquer, using the template in `code.js`.Test your
 new function; I've provided some basic testing code that uses
 [jsverify](https://jsverify.github.io/) in `code.test.js`.
+
+
 The recursive calls sum up the numbers in the base case, and "merges" the sums
 of the recursive calls otherwise. For example, the return value for the array `a
 = [1,5,-1,4]` is `9`.
+
+
 To make it a bit more interesting, instead of splitting into two sub-arrays like
 in merge sort, I want you to split into *three* sub-arrays at each divide step.
+
+
 Hint: Like in the implementation of merge sort, you may need a helper function
 that does the actual recursion.
 
@@ -29,11 +33,15 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file. 
-$T(1)=1$, $T(n)=3T(\frac{n}{3})$
+
+### Solution:
+
+
+$T(n)=3T(\frac{n}{3}) ,\hspace{5mm} T(1)=1$
 
 $T(\frac{n}{3})=3T(\frac{n}{\frac{3}{3}})=3T(\frac{n}{3^2})$
 
-Plugging in $ T(\frac{n}{3})$ we then have:
+Plugging in $T(\frac{n}{3})$ we then have:
 
 $= 3.(3T(\frac{n}{3^2}))$
 
