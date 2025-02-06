@@ -33,32 +33,30 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file. 
+$T(1)=1$, $T(n)=3T(\frac{n}{3})+C$
 
-### Solution:
-
-
-$T(n)=3T(\frac{n}{3}) ,\hspace{5mm} T(1)=1$
-
-$T(\frac{n}{3})=3T(\frac{n}{\frac{3}{3}})=3T(\frac{n}{3^2})$
+$T(\frac{n}{3})=3T(\frac{n}{\frac{3}{3}})=3T(\frac{n}{3^2})+C$
 
 Plugging in $T(\frac{n}{3})$ we then have:
 
-$= 3.(3T(\frac{n}{3^2}))$
+$= 3.(3T(\frac{n}{3^2})+C)+C$
 
 
-$=3^2.T(\frac{n}{3^2})$
+$=3^2.T(\frac{n}{3^2})+4C$
 
-$T(\frac{n}{3^2})=3T(\frac{n}{\frac{3^2}{3}})=3T(\frac{n}{3^3})$
+$T(\frac{n}{3^2})=3T(\frac{n}{\frac{3^2}{3}})+C=3T(\frac{n}{3^3})+C$
 
-Plugging in $T(\frac{n}{3^2})$ we have:
+$=3^2.(3.T(\frac{n}{3^3})+C)+4C$
 
-$=3^2.(3.T(\frac{n}{3^3}))$
+$=3^3.T(\frac{n}{3^3})9C+4C$
 
-$=3^3.T(\frac{n}{3^3})$
+$=3^3.T(\frac{n}{3^3})+13C$
+
+$=3^3.T(\frac{n}{3^3})+C$ {Contants combine together}
 
 Observing the pattern of change as we itterate we then obtain the following recurance relation:
 
-$=3^iT(\frac{n}{3^i}), $, where $i \in \mathbb{N}\setminus{\{0}\}$
+$=3^iT(\frac{n}{3^i})+C, $, where $i \in \mathbb{N}\setminus{\{0}\}$
 
 Now we need to find when the recurance relation is equal to the base case, in this insatnce it's T(1)=1.
 
@@ -66,10 +64,10 @@ $\frac{i}{3}=1 \implies i=log_3(n)$
 
 Plugging this back in we have:
 
-$=3^{log_3(n)}T(\frac{n}{3^{(log_3(n))}})$
+$=3^{log_3(n)}T(\frac{n}{3^{(log_3(n))}})+C$
 
 Then because $T(\frac{n}{3^{(log_3(n))}})$ matches our base case it equals , thus we now have:
 
-$=3^{log_3(n)}$
+$=3^{log_3(n)}+C$
 
-$=n \implies n \in \theta(n)$
+$=n+C \implies n \in \theta(n)$
